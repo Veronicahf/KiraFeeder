@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuracion>
+  <dispositivo>
+    <id>KF-2408-AX</id>
+    <mascota>Luna</mascota>
+    <conexion>conectado</conexion>
+  </dispositivo>
+  <rutinas>
+    <rutina>
+      <horario>Desayuno</horario>
+      <fecha>2026-10-28</fecha>
+      <hora>07:30</hora>
+      <porcionGramos>45</porcionGramos>
+      <tipoAlimento>seco</tipoAlimento>
+    </rutina>
+    <rutina>
+      <horario>Almuerzo</horario>
+      <fecha>2026-10-28</fecha>
+      <hora>13:00</hora>
+      <porcionGramos>30</porcionGramos>
+      <tipoAlimento>humedo</tipoAlimento>
+    </rutina>
+    <rutina>
+      <horario>Cena</horario>
+      <fecha>2026-10-28</fecha>
+      <hora>19:30</hora>
+      <porcionGramos>40</porcionGramos>
+      <tipoAlimento>seco</tipoAlimento>
+    </rutina>
+  </rutinas>
+</configuracion>

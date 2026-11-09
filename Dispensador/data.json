@@ -1,0 +1,30 @@
+{
+  "dispositivo": {
+    "id": "KF-2408-AX",
+    "mascota": "Luna",
+    "conexion": "conectado"
+  },
+  "rutinas": [
+    {
+      "horario": "Desayuno",
+      "fecha": "2026-10-28",
+      "hora": "07:30",
+      "porcionGramos": 45,
+      "tipoAlimento": "seco"
+    },
+    {
+      "horario": "Almuerzo",
+      "fecha": "2026-10-28",
+      "hora": "13:00",
+      "porcionGramos": 30,
+      "tipoAlimento": "humedo"
+    },
+    {
+      "horario": "Cena",
+      "fecha": "2026-10-28",
+      "hora": "19:30",
+      "porcionGramos": 40,
+      "tipoAlimento": "seco"
+    }
+  ]
+}

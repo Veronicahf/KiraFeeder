@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Panel de sincronización del dispensador inteligente Kira Feeder" />
+    <title>Kira Feeder | Sincronización</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Kira Feeder inicio">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>KIRA <b>FEEDER</b></span>
+        </a>
+        <div class="topbar-meta">
+          <span class="live-dot"></span>
+          <span>Centro de sincronización</span>
+          <span class="topbar-date" id="current-date"></span>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-section">
+          <div class="hero-copy">
+            <p class="eyebrow">DISPOSITIVO · KF-2408</p>
+            <h1>Rutinas que llegan<br /><em>a tiempo.</em></h1>
+            <p class="hero-description">Visualiza la configuración que viaja desde la aplicación móvil hacia los sistemas centrales de Kira Feeder.</p>
+          </div>
+          <div class="sync-orbit" aria-label="Estado de sincronización">
+            <div class="orbit-ring ring-one"></div>
+            <div class="orbit-ring ring-two"></div>
+            <div class="orbit-core">
+              <span class="core-icon">⌁</span>
+              <strong>SYNC</strong>
+              <small id="sync-status">EN ESPERA</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="device-summary" aria-label="Resumen del dispositivo">
+          <div class="device-identity">
+            <div class="pet-avatar" id="pet-avatar">L</div>
+            <div>
+              <span class="label">MASCOTA ASIGNADA</span>
+              <h2 id="pet-name">Cargando...</h2>
+            </div>
+          </div>
+          <div class="summary-item">
+            <span class="label">DISPOSITIVO</span>
+            <strong id="device-id">—</strong>
+          </div>
+          <div class="summary-item">
+            <span class="label">CONEXIÓN</span>
+            <strong class="connection-value"><span class="connection-dot"></span><span id="connection-status">—</span></strong>
+          </div>
+          <div class="summary-item">
+            <span class="label">RUTINAS ACTIVAS</span>
+            <strong id="routine-count">—</strong>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">ESTRUCTURA DE DATOS</p>
+              <h2>Una configuración, dos lenguajes.</h2>
+            </div>
+            <div class="controls">
+              <span class="last-update" id="last-update">Sin datos cargados</span>
+              <button class="refresh-button" id="refresh-button" type="button" title="Volver a cargar JSON y XML">
+                <span aria-hidden="true">↻</span> Actualizar
+              </button>
+            </div>
+          </div>
+
+          <div class="format-grid">
+            <article class="format-panel json-panel">
+              <div class="panel-header">
+                <div class="format-title"><span class="format-badge">{ }</span><div><h3>Aplicación móvil</h3><span>JSON · API moderna</span></div></div>
+                <span class="protocol-tag">REST</span>
+              </div>
+              <div class="code-window" aria-label="Datos en formato JSON"><div class="window-bar"><span></span><span></span><span></span><code>payload.json</code></div><pre id="json-output">Cargando...</pre></div>
+            </article>
+
+            <article class="format-panel xml-panel">
+              <div class="panel-header">
+                <div class="format-title"><span class="format-badge xml-badge">&lt;/&gt;</span><div><h3>Sistema heredado</h3><span>XML · Inventario y facturación</span></div></div>
+                <span class="protocol-tag legacy-tag">SOAP / XML</span>
+              </div>
+              <div class="code-window" aria-label="Datos en formato XML"><div class="window-bar"><span></span><span></span><span></span><code>payload.xml</code></div><pre id="xml-output">Cargando...</pre></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="routine-section">
+          <div class="section-heading compact-heading"><div><p class="eyebrow">PLAN DE ALIMENTACIÓN</p><h2>Próximas porciones</h2></div><span class="routine-total" id="routine-total">0 porciones</span></div>
+          <div class="routine-list" id="routine-list"><div class="empty-state">Cargando rutinas...</div></div>
+        </section>
+      </main>
+
+      <footer><span>KIRA FEEDER / DATA BRIDGE</span><span>JSON ↔ XML · <span id="footer-year"></span></span></footer>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
